@@ -2,7 +2,8 @@ import { useState } from "react";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaGraduationCap } from "react-icons/fa";
 import { RiBuilding2Fill } from "react-icons/ri";
-const Portfolio = ({ sectionRefs }) => {
+import { FaArrowUp } from "react-icons/fa";
+const Portfolio = ({ sectionRefs, activeSection }) => {
   const [fronendHover, setFrontendHover] = useState(false);
   const [backendHover, setBakendHover] = useState(false);
   const [devHover, setDevHover] = useState(false);
@@ -31,13 +32,22 @@ const Portfolio = ({ sectionRefs }) => {
       className="w-full h-auto"
       id="portfolio"
     >
+      <div
+        className={
+          activeSection == "home"
+            ? "hidden"
+            : "absolute bottom-10 right-10 p-2 bg-orange-100 rounded-xl shadow-2xs"
+        }
+      >
+        <FaArrowUp className="" />
+      </div>
       <div className="p-10 relative">
         <div className="w-[200px] h-[50px] bg-gradient-to-r from-orange-600 to-white rounded-2xl"></div>
         <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 top-4 left-30 shadow-2xs">
           Qualification
         </h1>
         <div className="flex items-center justify-center gap-10 p-8">
-          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl">
+          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
             <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
               <FaCalendarAlt />
               SEP/2022
@@ -51,7 +61,7 @@ const Portfolio = ({ sectionRefs }) => {
               The National Collage Jayanagara.
             </p>
           </div>
-          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl">
+          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
             <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
               <FaCalendarAlt />
               SEP/2024

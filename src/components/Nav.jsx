@@ -47,12 +47,12 @@ const Nav = () => {
 
   return (
     <section className="flex overflow-x-hidden overflow-y-hidden">
-      <div className="flex flex-col justify-between p-8 w-[180px] shadow-2xl h-screen sticky left-0">
+      <div className="md:flex md:flex-col justify-between p-8 md:w-[180px] shadow-2xl md:h-screen md:sticky left-0 absolute w-full flex-row bottom-2">
         <div className="flex flex-col items-start justify-center gap-10">
-          <div className="w-30 h-30 rounded-full p-1 bg-cover bg-orange-500 flex items-center justify-center overflow-hidden">
+          <div className="md:w-30 md:h-30 rounded-full p-1 bg-cover bg-orange-500 flex items-center justify-center overflow-hidden w-15 h-15">
             <img
               src="/pic2.png"
-              className="w-21 h-full object-cover rounded-full mt-8 overflow-hidden"
+              className="md:w-21 md:h-full object-cover rounded-full mt-8 overflow-hidden w-11"
               alt=""
             />
           </div>
@@ -168,7 +168,7 @@ const Nav = () => {
       </div>
       <main className="flex-1 overflow-y-auto h-screen p-2">
         <Hero sectionRefs={sectionRefs} />
-        <Portfolio sectionRefs={sectionRefs} />
+        <Portfolio sectionRefs={sectionRefs} activeSection={activeSection} />
         <Project sectionRefs={sectionRefs} />
         <Contact sectionRefs={sectionRefs} />
       </main>
