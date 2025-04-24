@@ -27,7 +27,7 @@ const Hero = ({ sectionRefs }) => {
   }, []);
   return (
     <section
-      className="w-full h-screen flex items-center justify-center"
+      className="md:w-full h-screen flex items-center justify-center"
       id="home"
       ref={(el) => {
         sectionRefs.home.current = el;
@@ -36,7 +36,9 @@ const Hero = ({ sectionRefs }) => {
     >
       <div
         className={
-          link ? "absolute bottom-10 hover:animate-bounce z-50" : "hidden"
+          link
+            ? "hidden md:block absolute bottom-10 hover:animate-bounce z-50"
+            : "hidden"
         }
       >
         <a
@@ -49,19 +51,19 @@ const Hero = ({ sectionRefs }) => {
           </div>
         </a>
       </div>
-      <div className="w-[600px] flex flex-col items-center justify-center gap-4">
+      <div className="w-[200px] md:w-[600px] flex flex-col items-center justify-center md:gap-4 gap-5">
         <h1 className="text-xl font-bold">
           Hi, I'm <span className="text-xl text-orange-600">Roshan</span>
         </h1>
-        <div className="flex flex-col items-center">
-          <h1 className="text-5xl font-bold text-center w-[800px]">
+        <div className="flex flex-col items-center md:w-[800px] w-[400px]">
+          <h1 className="text-[26px] md:text-5xl font-bold text-center">
             "Crafting Exceptional Digital
           </h1>
-          <h1 className="text-5xl font-bold text-center">
+          <h1 className="text-[26px] md:text-5xl font-bold text-center md:w-fit w-[300px]">
             Experiences, One Line of Code at a Time."
           </h1>
         </div>
-        <h1 className="text-md font-semibold text-center text-gray-600">
+        <h1 className="text-sm font-semibold text-center text-gray-600 md:w-fit w-[300px]">
           System-minded{" "}
           <span className="text-black font-bold">full-stack developer</span>{" "}
           specializing in{" "}

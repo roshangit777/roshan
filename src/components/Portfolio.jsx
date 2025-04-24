@@ -43,25 +43,11 @@ const Portfolio = ({ sectionRefs, activeSection }) => {
       </div>
       <div className="p-10 relative">
         <div className="w-[200px] h-[50px] bg-gradient-to-r from-orange-600 to-white rounded-2xl"></div>
-        <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 top-4 left-30 shadow-2xs">
+        <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 top-4 md:left-30 left-20 shadow-2xs">
           Qualification
         </h1>
-        <div className="flex items-center justify-center gap-10 p-8">
-          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
-            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
-              <FaCalendarAlt />
-              SEP/2022
-            </p>
-            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
-              <FaGraduationCap />
-              Bacholers of Science(BSC)
-            </p>
-            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
-              <RiBuilding2Fill />
-              The National Collage Jayanagara.
-            </p>
-          </div>
-          <div className="w-[400px] h-[200px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
+        <div className="flex md:flex-row flex-col items-center justify-center md:gap-10 md:p-8">
+          <div className="md:w-[400px] w-[350px] md:h-[200px] h-[150px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
             <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
               <FaCalendarAlt />
               SEP/2024
@@ -75,18 +61,32 @@ const Portfolio = ({ sectionRefs, activeSection }) => {
               AMC Engineering Collage Bannerugatta
             </p>
           </div>
+          <div className="md:w-[400px] w-[350px] md:h-[200px] h-[100px] bg-white shadow-2xs rounded-xl flex flex-col items-start justify-center hover:shadow-2xl transition-all duration-150">
+            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
+              <FaCalendarAlt />
+              SEP/2022
+            </p>
+            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
+              <FaGraduationCap />
+              Bacholers of Science(BSC)
+            </p>
+            <p className="text-md text-black font-semibold ml-5 flex items-center gap-2">
+              <RiBuilding2Fill />
+              The National Collage Jayanagara.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="p-10 pt-0 relative">
+      <div className="p-10 pt-0 relative md:mt-0 mt-30">
         <div className="w-[200px] h-[50px] bg-gradient-to-r from-orange-600 to-white rounded-2xl"></div>
-        <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 -top-6 left-30 shadow-2xs ">
+        <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 -top-6 md:left-30 left-30 shadow-2xs ">
           Skills
         </h1>
-        <div className="flex items-center justify-center gap-5 p-10">
+        <div className="flex md:flex-row flex-col items-center justify-center md:gap-5 md:p-10 p-2 gap-0 md:mt-10 mt-12">
           <div
             onMouseEnter={handleFrontendMouseEnter}
             onMouseLeave={handleFrontendMouseLeave}
-            className="w-[300px] h-[400px] bg-white rounded-xl flex flex-col items-center justify-start gap-5"
+            className="w-[300px] md:h-[400px] h-[340px] bg-white rounded-xl flex flex-col items-center justify-start gap-5"
             id="frontend"
           >
             <h1 className="text-md font-bold">Frontend</h1>
@@ -185,7 +185,7 @@ const Portfolio = ({ sectionRefs, activeSection }) => {
           <div
             onMouseEnter={handleBackendMouseEnter}
             onMouseLeave={handleBackendMouseLeave}
-            className="w-[300px] h-[400px] bg-white rounded-xl flex flex-col items-center justify-start gap-5"
+            className="w-[300px] md:h-[400px] h-[340px] bg-white rounded-xl flex flex-col items-center justify-start gap-5"
           >
             <h1 className="text-md font-bold">Backend</h1>
             <div className="flex flex-col items-center justify-center gap-5">
