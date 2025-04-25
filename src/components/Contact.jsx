@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { MdEmail, MdOutlineMail } from "react-icons/md";
 import { BiWorld } from "react-icons/bi";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -6,8 +7,32 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLocationArrow } from "react-icons/fa6";
 import { MdArrowOutward } from "react-icons/md";
+import toast from "react-hot-toast";
 
 const Contact = ({ sectionRefs }) => {
+  const from = useRef();
+  const [sending, setSending] = useState(false);
+  const sendMail = (e) => {
+    e.preventDefault();
+    setSending(true);
+    const sendingToast = toast.loading("Sending...");
+    emailjs
+      .sendForm("service_usg4upm", "template_plahzri", from.current, {
+        publicKey: "RKm6xXYpd0UUFHyqX",
+      })
+      .then(
+        () => {
+          toast.success("Email sent successfully!", { id: sendingToast });
+          setSending(false);
+        },
+        (error) => {
+          toast.error("Failed to send email. Please try again.", {
+            id: sendingToast,
+          });
+          setSending(false);
+        }
+      );
+  };
   return (
     <section
       ref={sectionRefs.contact}
@@ -65,51 +90,61 @@ const Contact = ({ sectionRefs }) => {
           <div className="w-[280px] flex flex-col md:items-start items-center justify-center gap-6 pr-5">
             <h3 className="text-md font-semibold self-center flex gap-2 items-center">
               <FaLocationArrow />
-              <span>Write me email</span>
+              <span>Write me a mail</span>
             </h3>
-            <div className="relative">
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Write your name"
-                className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg"
-              />
-              <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-80 right-62 -top-4">
-                Name
-              </span>
-            </div>
-            <div className="relative">
-              <input
-                type="email"
-                name=""
-                id=""
-                placeholder="Write your email"
-                className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg"
-              />
-              <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-80 right-62 -top-4">
-                Email
-              </span>
-            </div>
-            <div className="relative">
-              <textarea
-                name=""
-                id=""
-                placeholder="Write your message"
-                className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg resize-none"
-              />
-              <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-75 right-56 -top-4">
-                Message
-              </span>
-            </div>
-            <button className="px-10 py-2 bg-orange-500 text-white text-xl font-semibold rounded-2xl hover:bg-orange-600 hover:shadow-xs flex items-center gap-2">
-              <span>Send</span> <MdArrowOutward className="text-2xl" />
-            </button>
+            <form
+              ref={from}
+              onSubmit={(event) => sendMail(event)}
+              className="flex flex-col md:items-start items-center justify-center gap-6"
+            >
+              <div className="relative">
+                <input
+                  type="text"
+                  name="from_name"
+                  id=""
+                  placeholder="Write your name"
+                  className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg"
+                />
+                <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-80 right-62 -top-4">
+                  Name
+                </span>
+              </div>
+              <div className="relative">
+                <input
+                  type="email"
+                  name="his_email"
+                  id=""
+                  placeholder="Write your email"
+                  className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg"
+                />
+                <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-80 right-62 -top-4">
+                  Email
+                </span>
+              </div>
+              <div className="relative">
+                <textarea
+                  name="message"
+                  id=""
+                  placeholder="Write your message"
+                  className="md:w-sm w-[320px] border-2 p-5 rounded-4xl text-lg resize-none"
+                />
+                <span className="absolute text-sm font-semibold p-2 bg-white text-black rounded-2xl md:right-75 right-56 -top-4">
+                  Message
+                </span>
+              </div>
+              <button
+                disabled={sending}
+                className="px-10 py-2 bg-orange-500 text-white text-xl font-semibold rounded-2xl hover:bg-orange-600 hover:shadow-xs flex items-center gap-2 disabled:bg-gray-400 disabled:text-white"
+              >
+                <span>{sending ? "Sending..." : "Send"}</span>{" "}
+                <MdArrowOutward className="text-2xl" />
+              </button>
+            </form>
           </div>
         </div>
       </div>
-      <footer className="w-full md:h-fit bg-orange-600 text-white text-center rounded-2xl p-10">
-        <h2 className="text-2xl font-bold mt-10 md:mt-1 mb-1">Roshan</h2>
+      <footer className="w-full md:h-fit bg-orange-600 text-white text-center rounded-xl p-10 md:p-4">
+        <h2 className="text-2xl font-bold mt-10 md:mt-0 mb-1">Roshan</h2>
         <span className="block">Full-stack Developer</span>
         <div className="mt-5">
           <ul className="flex justify-center gap-4 text-2xl">
@@ -129,7 +164,7 @@ const Contact = ({ sectionRefs }) => {
               </a>
             </li>
           </ul>
-          <p className="mt-4 mb-30 md:mb-1 text-sm">
+          <p className="mt-4 mb-30 md:mb-0 text-sm">
             Built & designed by Roshan ©2025
           </p>
         </div>

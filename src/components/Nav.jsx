@@ -49,7 +49,7 @@ const Nav = () => {
   console.log(activeSection);
 
   return (
-    <section className="relative flex overflow-x-hidden overflow-y-hidden">
+    <section className="relative flex overflow-x-hidden overflow-y-hidden scroll-smooth">
       <div className="md:bg-white md:flex md:flex-col justify-between p-8 md:w-[180px] shadow-2xl md:h-screen md:sticky md:left-0 md:rounded-none absolute w-[320px] flex left-5 bottom-20 bg-orange-600 z-100 h-[20px] rounded-4xl">
         <div className="w-full md:hidden flex items-center justify-between gap-40">
           <div
@@ -67,7 +67,9 @@ const Nav = () => {
                     ? "flex flex-col items-center text-white font-semibold text-sm"
                     : "flex flex-col items-center hover:text-white font-semibold text-sm"
                 }
-                onClick={() => setMobileNav(false)}
+                onClick={() => {
+                  setMobileNav(false);
+                }}
               >
                 <IoHomeOutline className="text-2xl" />
                 <a
@@ -78,6 +80,7 @@ const Nav = () => {
                       : "transition-all duration-200 hover:text-white"
                   }
                 >
+                  <span onClick={() => (window.location.href = "#home")}></span>
                   Home
                 </a>
               </li>
@@ -180,6 +183,7 @@ const Nav = () => {
                     ? "flex items-center gap-5 text-orange-600 font-semibold text-lg"
                     : "flex items-center gap-3 hover:gap-5 hover:text-orange-600 font-semibold text-lg"
                 }
+                onClick={() => (window.location.href = "#home")}
               >
                 <IoHomeOutline className="text-2xl" />
                 <a
@@ -199,6 +203,7 @@ const Nav = () => {
                     ? "flex items-center gap-5 text-orange-600 font-semibold text-lg"
                     : "flex items-center gap-3 hover:gap-5 hover:text-orange-600 font-semibold text-lg"
                 }
+                onClick={() => (window.location.href = "#portfolio")}
               >
                 <LiaBinocularsSolid className="text-2xl" />
                 <a
@@ -218,6 +223,7 @@ const Nav = () => {
                     ? "flex items-center gap-5 text-orange-600 font-semibold text-lg"
                     : "flex items-center gap-3 hover:gap-5 hover:text-orange-600 font-semibold text-lg"
                 }
+                onClick={() => (window.location.href = "#project")}
               >
                 <GrProjects className="text-2xl" />
                 <a
@@ -237,6 +243,7 @@ const Nav = () => {
                     ? "flex items-center gap-5 text-orange-600 font-semibold text-lg"
                     : "flex items-center gap-3 hover:gap-5 hover:text-orange-600 font-semibold text-lg"
                 }
+                onClick={() => (window.location.href = "#contact")}
               >
                 <RiContactsLine className="text-2xl" />
                 <a

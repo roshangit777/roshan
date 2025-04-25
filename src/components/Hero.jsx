@@ -56,10 +56,10 @@ const Hero = ({ sectionRefs }) => {
           Hi, I'm <span className="text-xl text-orange-600">Roshan</span>
         </h1>
         <div className="flex flex-col items-center md:w-[800px] w-[400px]">
-          <h1 className="text-[26px] md:text-5xl font-bold text-center">
+          <h1 className="text-[26px] md:text-5xl font-bold text-center ">
             "Crafting Exceptional Digital
           </h1>
-          <h1 className="text-[26px] md:text-5xl font-bold text-center md:w-fit w-[300px]">
+          <h1 className="text-[26px] md:text-5xl font-bold text-center md:w-fit w-[300px] ">
             Experiences, One Line of Code at a Time."
           </h1>
         </div>
