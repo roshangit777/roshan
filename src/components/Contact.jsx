@@ -1,5 +1,5 @@
 import React from "react";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdOutlineMail } from "react-icons/md";
 import { BiWorld } from "react-icons/bi";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -9,7 +9,11 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Contact = ({ sectionRefs }) => {
   return (
-    <section ref={sectionRefs.contact} className="w-full h-screen" id="contact">
+    <section
+      ref={sectionRefs.contact}
+      className="w-full h-screen flex flex-col"
+      id="contact"
+    >
       <div className="p-10 relative">
         <div className="w-[200px] h-[50px] bg-gradient-to-r from-orange-600 to-white rounded-2xl"></div>
         <h1 className="absolute font-caveat text-5xl text-black font-bold z-50 top-4 md:left-30 left-20 shadow-2xs">
@@ -26,7 +30,7 @@ const Contact = ({ sectionRefs }) => {
                 Email
               </span>
               <a
-                href=""
+                href="mailto:roshanofficial766@gmail.com"
                 className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
               >
                 <MdEmail />
@@ -38,7 +42,7 @@ const Contact = ({ sectionRefs }) => {
                 Lindin
               </span>
               <a
-                href=""
+                href="https://www.linkedin.com/in/roshanrrr/"
                 className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
               >
                 <FaLinkedin />
@@ -49,7 +53,10 @@ const Contact = ({ sectionRefs }) => {
               <span className="text-md text-gray-500 font-semibold ml-3">
                 Github
               </span>
-              <a className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white">
+              <a
+                href="https://github.com/roshangit777"
+                className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
+              >
                 <FaGithub />
                 <FaLongArrowAltRight />
               </a>
@@ -101,6 +108,32 @@ const Contact = ({ sectionRefs }) => {
           </div>
         </div>
       </div>
+      <footer className="w-full md:h-fit bg-orange-600 text-white text-center rounded-2xl p-10">
+        <h2 className="text-2xl font-bold mt-10 md:mt-1 mb-1">Roshan</h2>
+        <span className="block">Full-stack Developer</span>
+        <div className="mt-5">
+          <ul className="flex justify-center gap-4 text-2xl">
+            <li>
+              <a href="mailto:roshanofficial766@gmail.com" className="">
+                <MdOutlineMail />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/roshangit777" className="">
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/roshanrrr/" className="">
+                <FaLinkedin />
+              </a>
+            </li>
+          </ul>
+          <p className="mt-4 mb-30 md:mb-1 text-sm">
+            Built & designed by Roshan ©2025
+          </p>
+        </div>
+      </footer>
     </section>
   );
 };

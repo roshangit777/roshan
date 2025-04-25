@@ -36,8 +36,9 @@ const Portfolio = ({ sectionRefs, activeSection }) => {
         className={
           activeSection == "home"
             ? "hidden"
-            : "absolute bottom-10 right-10 p-2 bg-orange-100 rounded-xl shadow-2xs"
+            : "hidden md:block absolute bottom-10 right-10 p-2 bg-orange-100 rounded-xl shadow-2xs cursor-pointer z-50"
         }
+        onClick={() => (window.location.href = "#home")}
       >
         <FaArrowUp className="" />
       </div>

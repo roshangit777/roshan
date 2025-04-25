@@ -42,7 +42,7 @@ const Hero = ({ sectionRefs }) => {
         }
       >
         <a
-          href=""
+          href="#portfolio"
           className="flex items-center gap-2 px-7 py-2 bg-[#fff] shadow-2xl rounded-md"
         >
           <span className="text-sm font-semibold">Know more</span>
@@ -74,13 +74,13 @@ const Hero = ({ sectionRefs }) => {
           up even more.
         </h1>
         <div className="flex items-center gap-4">
-          <a href="">
+          <a href="https://github.com/roshangit777">
             <FaGithub className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/roshanrrr/">
             <FaLinkedin className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
-          <a href="">
+          <a href="mailto:roshanofficial766@gmail.com">
             <MdOutlineMail className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
         </div>

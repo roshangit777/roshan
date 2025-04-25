@@ -71,7 +71,7 @@ const Nav = () => {
               >
                 <IoHomeOutline className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#home"
                   className={
                     activeSection == "home"
                       ? "transition-all duration-200 text-white"
@@ -91,7 +91,7 @@ const Nav = () => {
               >
                 <LiaBinocularsSolid className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#portfolio"
                   className={
                     activeSection == "portfolio"
                       ? "transition-all duration-200 text-white"
@@ -111,7 +111,7 @@ const Nav = () => {
               >
                 <GrProjects className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#project"
                   className={
                     activeSection == "project"
                       ? "transition-all duration-200 text-white"
@@ -131,7 +131,7 @@ const Nav = () => {
               >
                 <RiContactsLine className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#contact"
                   className={
                     activeSection == "contact"
                       ? "transition-all duration-200 text-white"
@@ -183,7 +183,7 @@ const Nav = () => {
               >
                 <IoHomeOutline className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#home"
                   className={
                     activeSection == "home"
                       ? "transition-all duration-400 bg-orange-600 text-white px-3 rounded-md"
@@ -202,7 +202,7 @@ const Nav = () => {
               >
                 <LiaBinocularsSolid className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#portfolio"
                   className={
                     activeSection == "portfolio"
                       ? "transition-all duration-400 bg-orange-600 text-white px-3 rounded-md"
@@ -221,7 +221,7 @@ const Nav = () => {
               >
                 <GrProjects className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#project"
                   className={
                     activeSection == "project"
                       ? "transition-all duration-400 bg-orange-600 text-white px-3 rounded-md"
@@ -240,7 +240,7 @@ const Nav = () => {
               >
                 <RiContactsLine className="text-2xl" />
                 <a
-                  href="Home"
+                  href="#contact"
                   className={
                     activeSection == "contact"
                       ? "transition-all duration-400 bg-orange-600 text-white px-3 rounded-md"
@@ -257,19 +257,19 @@ const Nav = () => {
           <nav className="list-none flex flex-col gap-4">
             <div className="flex flex-row gap-4 items-center justify-start">
               <li className="text-2xl hover:text-orange-500">
-                <a href="" className="">
+                <a href="https://github.com/roshangit777" className="">
                   <FaGithub />
                 </a>
               </li>
               <li className="text-2xl hover:text-orange-500">
-                <a href="" className="">
+                <a href="https://www.linkedin.com/in/roshanrrr/" className="">
                   <FaLinkedin />
                 </a>
               </li>
             </div>
             <div className="flex flex-row gap-4 items-center">
               <li className="text-2xl hover:text-orange-500">
-                <a href="" className="">
+                <a href="mailto:roshanofficial766@gmail.com" className="">
                   <MdOutlineMail />
                 </a>
               </li>

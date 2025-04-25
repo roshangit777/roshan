@@ -30,32 +30,56 @@ const Project = ({ sectionRefs }) => {
   };
   const details = [
     {
-      img: "/project1.jpg",
-      type: "web-app",
-      title: "Social meadia",
-      demoLink: "",
-      gitLink: "",
+      img: "/file-share.png",
+      type: "SaaS/Web-app",
+      title: "File-share",
+      demoLink: "https://file-share-rdmr.onrender.com",
+      gitLink: "https://github.com/roshangit777/file-share",
     },
     {
-      img: "/project2.jpg",
+      img: "/social-media.jpg",
       type: "web-app",
-      title: "Social meadia",
-      demoLink: "",
-      gitLink: "",
+      title: "Social Meadia",
+      demoLink: "https://unityhub-b2jg.onrender.com/login",
+      gitLink: "https://github.com/roshangit777/Social-Media",
     },
     {
-      img: "/project3.jpg",
+      img: "/car-uber.webp",
       type: "web-app",
-      title: "Social meadia",
+      title: "Uber Clone",
       demoLink: "",
-      gitLink: "",
+      gitLink: "https://github.com/roshangit777/Uber-clone",
     },
     {
-      img: "/project4.jpg",
+      img: "/todo.jpg",
       type: "web-app",
-      title: "Social meadia",
-      demoLink: "",
-      gitLink: "",
+      title: "Todo List",
+      demoLink: "https://taskmanagement777.netlify.app/",
+      gitLink: "https://github.com/roshangit777/todo-app",
+    },
+    {
+      img: "/food.png",
+      type: "web-app",
+      title: "Recipe app",
+      demoLink: "https://remarkable-cactus-0bf11e.netlify.app/",
+      gitLink:
+        "https://github.com/roshangit777/React-projects/tree/main/food-recipe",
+    },
+    {
+      img: "/joke.jpg",
+      type: "web-app",
+      title: "Joke-generator app",
+      demoLink: "https://eclectic-paprenjak-d94e83.netlify.app/",
+      gitLink:
+        "https://github.com/roshangit777/React-projects/tree/main/Joke-generator",
+    },
+    {
+      img: "/whether.jpeg",
+      type: "web-app",
+      title: "Whether app",
+      demoLink: "https://serene-syrniki-dae390.netlify.app/",
+      gitLink:
+        "https://github.com/roshangit777/React-projects/tree/main/Whether-app",
     },
   ];
 
@@ -114,7 +138,11 @@ const Project = ({ sectionRefs }) => {
             <div className="flex gap-2">
               <a
                 href={details[prev].demoLink}
-                className="px-4 bg-gray-800 py-2 rounded-md text-white font-semibold hover:bg-black hover:shadow-2xs"
+                className={
+                  details[prev].demoLink.length > 0
+                    ? "px-4 bg-gray-800 py-2 rounded-md text-white font-semibold hover:bg-black hover:shadow-2xs"
+                    : "hidden"
+                }
               >
                 View Demo
               </a>
