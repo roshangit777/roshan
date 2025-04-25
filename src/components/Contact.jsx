@@ -31,14 +31,14 @@ const Contact = ({ sectionRefs }) => {
             setSending(false);
           },
           () => {
-            toast.error("Failed to send email. Please try again.", {
+            toast.error("Failed. Please try again.", {
               id: sendingToast,
             });
             setSending(false);
           }
         );
     } else {
-      toast.error("Fill all the filds and try agai.", { id: sendingToast });
+      toast.error("Fill all the filds and try again.", { id: sendingToast });
       setSending(false);
       return null;
     }
