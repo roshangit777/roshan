@@ -16,23 +16,34 @@ const Contact = ({ sectionRefs }) => {
     e.preventDefault();
     setSending(true);
     const sendingToast = toast.loading("Sending...");
-    emailjs
-      .sendForm("service_usg4upm", "template_plahzri", from.current, {
-        publicKey: "RKm6xXYpd0UUFHyqX",
-      })
-      .then(
-        () => {
-          toast.success("Email sent successfully!", { id: sendingToast });
-          setSending(false);
-        },
-        (error) => {
-          toast.error("Failed to send email. Please try again.", {
-            id: sendingToast,
-          });
-          setSending(false);
-        }
-      );
+    if (
+      from.current.from_name.value &&
+      from.current.his_email.value &&
+      from.current.message.value
+    ) {
+      emailjs
+        .sendForm("service_usg4upm", "template_plahzri", from.current, {
+          publicKey: "RKm6xXYpd0UUFHyqX",
+        })
+        .then(
+          () => {
+            toast.success("Email sent successfully!", { id: sendingToast });
+            setSending(false);
+          },
+          () => {
+            toast.error("Failed to send email. Please try again.", {
+              id: sendingToast,
+            });
+            setSending(false);
+          }
+        );
+    } else {
+      toast.error("Fill all the filds and try agai.", { id: sendingToast });
+      setSending(false);
+      return null;
+    }
   };
+
   return (
     <section
       ref={sectionRefs.contact}
@@ -94,7 +105,7 @@ const Contact = ({ sectionRefs }) => {
             </h3>
             <form
               ref={from}
-              onSubmit={(event) => sendMail(event)}
+              onSubmit={() => sendMail(event)}
               className="flex flex-col md:items-start items-center justify-center gap-6"
             >
               <div className="relative">

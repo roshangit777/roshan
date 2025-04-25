@@ -46,7 +46,6 @@ const Nav = () => {
       });
     };
   }, []);
-  console.log(activeSection);
 
   return (
     <section className="relative flex overflow-x-hidden overflow-y-hidden scroll-smooth">
