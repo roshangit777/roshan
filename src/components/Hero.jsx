@@ -52,14 +52,15 @@ const Hero = ({ sectionRefs }) => {
         </a>
       </div>
       <div className="w-[200px] md:w-[600px] flex flex-col items-center justify-center md:gap-4 gap-5">
-        <h1 className="text-xl font-bold">
-          Hi, I'm <span className="text-xl text-orange-600">Roshan</span>
+        <h1 className="text-lg md:text-xl font-bold">
+          Hi, I'm{" "}
+          <span className="text-lg md:text-xl text-orange-600">Roshan</span>
         </h1>
         <div className="flex flex-col items-center md:w-[800px] w-[400px]">
-          <h1 className="text-[26px] md:text-5xl font-bold text-center ">
-            "Crafting Exceptional Digital
+          <h1 className="text-[22px] md:text-5xl font-bold text-center ">
+            "Transforming Ideas into Digital
           </h1>
-          <h1 className="text-[26px] md:text-5xl font-bold text-center md:w-fit w-[300px] ">
+          <h1 className="text-[22px] md:text-5xl font-bold text-center md:w-fit w-[300px] ">
             Experiences, One Line of Code at a Time."
           </h1>
         </div>
@@ -74,20 +75,24 @@ const Hero = ({ sectionRefs }) => {
           up even more.
         </h1>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/roshangit777">
+          <a href="https://github.com/roshangit777" target="_blank">
             <FaGithub className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
-          <a href="https://www.linkedin.com/in/roshanrrr/">
+          <a href="https://www.linkedin.com/in/roshanrrr/" target="_blank">
             <FaLinkedin className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
-          <a href="mailto:roshanofficial766@gmail.com">
+          <a href="mailto:roshanofficial766@gmail.com" target="_blank">
             <MdOutlineMail className="text-2xl font-bold hover:text-orange-600 hover:scale-125 transition-all duration-100" />
           </a>
         </div>
-        <button className="px-5 py-2 bg-orange-600 text-white text-md font-semibold rounded-lg flex items-center gap-2 hover:px-7 hover:scale-105 hover:bg-black transition-all duration-200">
+        <a
+          href="/Roshan-resume-2.pdf"
+          target="_blank"
+          className="px-5 py-2 bg-orange-600 text-white text-md font-semibold rounded-lg flex items-center gap-2 hover:px-7 hover:scale-105 hover:bg-black transition-all duration-200"
+        >
           <span>Download CV</span>{" "}
           <MdOutlineFileDownload className="text-2xl font-bold" />
-        </button>
+        </a>
       </div>
     </section>
   );

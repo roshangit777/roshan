@@ -67,6 +67,7 @@ const Contact = ({ sectionRefs }) => {
               </span>
               <a
                 href="mailto:roshanofficial766@gmail.com"
+                target="_blank"
                 className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
               >
                 <MdEmail />
@@ -79,6 +80,7 @@ const Contact = ({ sectionRefs }) => {
               </span>
               <a
                 href="https://www.linkedin.com/in/roshanrrr/"
+                target="_blank"
                 className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
               >
                 <FaLinkedin />
@@ -91,6 +93,7 @@ const Contact = ({ sectionRefs }) => {
               </span>
               <a
                 href="https://github.com/roshangit777"
+                target="_blank"
                 className="text-2xl font-semibold cursor-pointer flex gap-1 items-center px-3 py-1 hover:gap-4 transition-all duration-250 md:hover:bg-orange-500 md:hover:text-white rounded-md md:bg-white bg-orange-500 md:text-black text-white"
               >
                 <FaGithub />
@@ -160,17 +163,29 @@ const Contact = ({ sectionRefs }) => {
         <div className="mt-5">
           <ul className="flex justify-center gap-4 text-2xl">
             <li>
-              <a href="mailto:roshanofficial766@gmail.com" className="">
+              <a
+                href="mailto:roshanofficial766@gmail.com"
+                target="_blank"
+                className=""
+              >
                 <MdOutlineMail />
               </a>
             </li>
             <li>
-              <a href="https://github.com/roshangit777" className="">
+              <a
+                href="https://github.com/roshangit777"
+                target="_blank"
+                className=""
+              >
                 <FaGithub />
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/roshanrrr/" className="">
+              <a
+                href="https://www.linkedin.com/in/roshanrrr/"
+                target="_blank"
+                className=""
+              >
                 <FaLinkedin />
               </a>
             </li>

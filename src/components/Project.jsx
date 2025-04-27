@@ -138,6 +138,7 @@ const Project = ({ sectionRefs }) => {
             <div className="flex gap-2">
               <a
                 href={details[prev].demoLink}
+                target="_blank"
                 className={
                   details[prev].demoLink.length > 0
                     ? "px-4 bg-gray-800 py-2 rounded-md text-white font-semibold hover:bg-black hover:shadow-2xs"
@@ -148,6 +149,7 @@ const Project = ({ sectionRefs }) => {
               </a>
               <a
                 href={details[prev].gitLink}
+                target="_blank"
                 className="px-4 bg-orange-500 py-2 rounded-md text-white font-semibold hover:bg-orange-600 hover:shadow-2xs"
               >
                 View Code
@@ -167,12 +169,14 @@ const Project = ({ sectionRefs }) => {
             <div className="flex gap-2">
               <a
                 href={details[next].demoLink}
+                target="_blank"
                 className="px-4 bg-gray-800 py-2 rounded-md text-white font-semibold hover:bg-black hover:shadow-2xs"
               >
                 View Demo
               </a>
               <a
                 href={details[next].gitLink}
+                target="_blank"
                 className="px-4 bg-orange-500 py-2 rounded-md text-white font-semibold hover:bg-orange-600 hover:shadow-2xs"
               >
                 View Code

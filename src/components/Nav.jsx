@@ -263,24 +263,36 @@ const Nav = () => {
           <nav className="list-none flex flex-col gap-4">
             <div className="flex flex-row gap-4 items-center justify-start">
               <li className="text-2xl hover:text-orange-500">
-                <a href="https://github.com/roshangit777" className="">
+                <a
+                  href="https://github.com/roshangit777"
+                  target="_blank"
+                  className=""
+                >
                   <FaGithub />
                 </a>
               </li>
               <li className="text-2xl hover:text-orange-500">
-                <a href="https://www.linkedin.com/in/roshanrrr/" className="">
+                <a
+                  href="https://www.linkedin.com/in/roshanrrr/"
+                  target="_blank"
+                  className=""
+                >
                   <FaLinkedin />
                 </a>
               </li>
             </div>
             <div className="flex flex-row gap-4 items-center">
               <li className="text-2xl hover:text-orange-500">
-                <a href="mailto:roshanofficial766@gmail.com" className="">
+                <a
+                  href="mailto:roshanofficial766@gmail.com"
+                  target="_blank"
+                  className=""
+                >
                   <MdOutlineMail />
                 </a>
               </li>
               <li className="text-2xl hover:text-orange-500">
-                <a href="" className="">
+                <a href="/Roshan-resume-2.pdf" className="" target="_blank">
                   <FaFileDownload className="w-6 h-5" />
                 </a>
               </li>
