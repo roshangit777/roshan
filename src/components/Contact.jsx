@@ -47,7 +47,7 @@ const Contact = ({ sectionRefs }) => {
   return (
     <section
       ref={sectionRefs.contact}
-      className="w-full h-screen flex flex-col"
+      className="w-full h-screen flex flex-col md:mt-0 mt-10"
       id="contact"
     >
       <div className="p-10 relative">
@@ -101,7 +101,7 @@ const Contact = ({ sectionRefs }) => {
               </a>
             </div>
           </div>
-          <div className="w-[280px] flex flex-col md:items-start items-center justify-center gap-6 pr-5">
+          <div className="md:w-fit w-full flex flex-col md:items-start items-center justify-center gap-6">
             <h3 className="text-md font-semibold self-center flex gap-2 items-center">
               <FaLocationArrow />
               <span>Write me a mail</span>

@@ -29,7 +29,7 @@ const Portfolio = ({ sectionRefs, activeSection }) => {
   return (
     <section
       ref={sectionRefs.portfolio}
-      className="w-full md:h-auto h-450"
+      className="w-full md:h-auto h-[1200px]"
       id="portfolio"
     >
       <div
