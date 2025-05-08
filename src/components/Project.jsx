@@ -127,7 +127,7 @@ const Project = ({ sectionRefs }) => {
           </div> */}
         <div className="flex md:gap-10 gap-1 items-center">
           <button
-            className="md:p-2 pr-0 text-black font-bold md:text-4xl text-4xl hover:rounded-2xl hover:bg-gray-100  hover:text-orange-500"
+            className="md:p-2 pr-0 text-black font-bold md:text-4xl text-3xl hover:rounded-2xl hover:bg-gray-100  hover:text-orange-500"
             onClick={() => {
               setPrev(prev <= 0 ? details.length - 1 : prev - 1);
               setNext(next <= 0 ? details.length - 1 : next - 1);
