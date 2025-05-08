@@ -49,14 +49,14 @@ const Nav = () => {
 
   return (
     <section className="relative flex overflow-x-hidden overflow-y-hidden scroll-smooth">
-      <div className="md:bg-white md:flex md:flex-col justify-between p-8 md:w-[180px] shadow-2xl md:h-screen md:sticky md:left-0 md:rounded-none absolute w-[320px] flex left-5 bottom-20 bg-orange-600 z-100 h-[20px] rounded-4xl">
+      <div className="md:bg-white md:flex md:flex-col justify-between p-8 md:w-[180px] shadow-2xl md:h-screen md:sticky md:left-0 md:rounded-none absolute w-[320px] flex left-[50%] -translate-x-1/2 md:translate-x-0 bottom-20 bg-orange-600 z-100 h-[20px] rounded-4xl">
         <div className="w-full md:hidden flex items-center justify-between gap-40">
           <div
             id="navigation"
             className={
               mobileNav
                 ? "md:hidden absolute w-full h-[150px] bg-orange-600 bottom-0 right-0 rounded-3xl z-200 flex flex-col items-center justify-around transition-all duration-150 p-10"
-                : "md:hidden absolute w-full h-[150px] bg-orange-600 bottom-0 -right-100 rounded-3xl z-200 flex flex-col items-center justify-around transition-all duration-150"
+                : "md:hidden absolute w-full h-[150px] bg-orange-600 bottom-0 -right-150 rounded-3xl z-200 flex flex-col items-center justify-around transition-all duration-100"
             }
           >
             <ul className="flex items-center justify-center gap-4">
@@ -292,7 +292,7 @@ const Nav = () => {
                 </a>
               </li>
               <li className="text-2xl hover:text-orange-500">
-                <a href="/Roshan-resume-2.pdf" className="" target="_blank">
+                <a href="/Roshan-resume(1).pdf" className="" target="_blank">
                   <FaFileDownload className="w-6 h-5" />
                 </a>
               </li>

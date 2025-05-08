@@ -86,7 +86,7 @@ const Hero = ({ sectionRefs }) => {
           </a>
         </div>
         <a
-          href="/Roshan-resume-2.pdf"
+          href="/Roshan-resume(1).pdf"
           target="_blank"
           className="px-5 py-2 bg-orange-600 text-white text-md font-semibold rounded-lg flex items-center gap-2 hover:px-7 hover:scale-105 hover:bg-black transition-all duration-200"
         >
