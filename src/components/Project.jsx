@@ -51,6 +51,14 @@ const Project = ({ sectionRefs }) => {
       gitLink: "https://github.com/roshangit777/Uber-clone",
     },
     {
+      img: "/microplastic1.webp",
+      type: "web-app/ML-model",
+      title: "Microplastic Disease Prediction and Analysis",
+      demoLink: "https://effulgent-vacherin-858758.netlify.app/",
+      gitLink:
+        "https://github.com/roshangit777/microplastic-disease-prediction-app",
+    },
+    {
       img: "/todo.jpg",
       type: "web-app",
       title: "Todo List",
