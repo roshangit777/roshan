@@ -53,7 +53,7 @@ const Project = ({ sectionRefs }) => {
     {
       img: "/microplastic1.webp",
       type: "web-app/ML-model",
-      title: "Microplastic Disease Prediction and Analysis",
+      title: "Microplastic Disease Prediction",
       demoLink: "https://effulgent-vacherin-858758.netlify.app/",
       gitLink:
         "https://github.com/roshangit777/microplastic-disease-prediction-app",
